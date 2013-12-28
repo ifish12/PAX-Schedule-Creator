@@ -104,7 +104,7 @@ function landing(){
 	return $out;
 }
 
-function parseEvents(){
+function parseEvents(){ // This function is our temporary fix for a bigger issue. 
 	$xmlLocation = "http://hw1.pa-cdn.com/pax/resources/guidebookschedule.xml";
 	$scheduleData = new SimpleXMLElement($xmlLocation, NULL, TRUE);
 
