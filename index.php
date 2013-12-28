@@ -1,8 +1,8 @@
 <?PHP
 include("Event.php");
 include("functions.php");
-//$xmlLocation = "http://hw1.pa-cdn.com/pax/resources/guidebookschedule.xml";
-$xmlLocation = "guidebookschedule.xml";
+
+$xmlLocation = "http://hw1.pa-cdn.com/pax/resources/guidebookschedule.xml";
 $scheduleData = new SimpleXMLElement($xmlLocation, NULL, TRUE);
 
 $events = array();
