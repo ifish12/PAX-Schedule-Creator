@@ -103,3 +103,14 @@ function landing(){
 	$out .= footer();
 	return $out;
 }
+
+function parseEvents(){
+	$xmlLocation = "http://hw1.pa-cdn.com/pax/resources/guidebookschedule.xml";
+	$scheduleData = new SimpleXMLElement($xmlLocation, NULL, TRUE);
+
+	$events = array();
+	foreach($scheduleData->panel as $event){
+		$events[] = new Event($event);
+	}
+	return $events;
+}

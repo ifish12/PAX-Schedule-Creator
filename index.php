@@ -2,25 +2,17 @@
 include("Event.php");
 include("functions.php");
 
-$xmlLocation = "http://hw1.pa-cdn.com/pax/resources/guidebookschedule.xml";
-$scheduleData = new SimpleXMLElement($xmlLocation, NULL, TRUE);
-
-$events = array();
-foreach($scheduleData->panel as $event){
-	$events[] = new Event($event);
-}
-
 $action = isset($_GET["action"]) ? $_GET["action"] : null;
 
 switch($action){
 	case "allEvents":
-		iCalOut($events);
+		iCalOut(parseEvents());
 		break;
 	case "form":
-		echo form($events);
+		echo form(parseEvents());
 		break;
 	case "formSubmit":
-		$selectedEvents = formSubmit($events);
+		$selectedEvents = formSubmit(parseEvents());
 		iCalOut($selectedEvents);
 		break;
 	default:
