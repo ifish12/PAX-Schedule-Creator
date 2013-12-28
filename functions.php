@@ -80,25 +80,25 @@ function landing(){
 	</div>
 
 	<div class=\"container\">
-	<!-- Example row of columns -->
-	<div class=\"row\">
-		<div class=\"col-md-6\">
-		<h2>All Events to iCal</h2>
-		<p>This takes all the events on the PAX schedule and puts them into a iCalendar file</p>
-		<p><a class=\"btn btn-primary\" href=\"?action=allEvents\">All Events To iCal</a></p>
+	
+		<div class=\"row\">
+			<div class=\"col-md-6\">
+				<h2>All Events to iCal</h2>
+				<p>This takes all the events on the PAX schedule and puts them into a iCalendar file</p>
+				<p><a class=\"btn btn-primary\" href=\"?action=allEvents\">All Events To iCal</a></p>
+			</div>
+			<div class=\"col-md-6\">
+				<h2>Choose what events go to iCalendar</h2>
+				<p>This throws you to a list of check boxes which you can then pick and choose what events go into the iCalendar file if you don't want to import every single event into the iCalendar file</p>
+				<p><a class=\"btn btn-danger\" href=\"?action=form\">Choose what events go to iCalendar</a></p>
+			</div>
 		</div>
-		<div class=\"col-md-6\">
-		<h2>Choose what events go to ical</h2>
-		<p>This throws you to a list of check boxes which you can then pick and choose what events go into the iCalendar file if you don't want to import every single event into the iCalendar file</p>
-		<p><a class=\"btn btn-danger\" href=\"?action=form\">Choose what events go to iCal</a></p>
-	</div>
-	</div>
 
-	<hr>
+		<hr>
 
-	<footer>
-		<p>Created by Geoff Shapiro &amp; Mark Furland</p>
-	</footer>
+		<footer>
+			<p>Created by Geoff Shapiro &amp; Mark Furland</p>
+		</footer>
 	</div> <!-- /container -->";
 	$out .= footer();
 	return $out;
