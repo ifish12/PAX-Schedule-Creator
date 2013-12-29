@@ -68,7 +68,7 @@ function landing(){
 	$out = headerHTML();
 
 	$out .= <<<EOF
-	<div class=\jumbotron\>
+	<div class="jumbotron">
 	<div class="container">
 		<h1>PAX Schedule Creator</h1>
 		<p>This small tool lets you create an <a href="http://en.wikipedia.org/wiki/ICalendar">iCalendar file</a> of the PAX schedule. This works for any PAX event that currently exists. We're going to keep this up to date with the most recent XML file PA gives us. After you have the file you can import it into your favourite calendar program. We've tested it with Calendar(OS X) and Google Calendar and it works flawlessly. The source code can be found <a href="https://github.com/ifish12/PAX-Schedule-Creator">here</a></p>
