@@ -60,8 +60,11 @@ function footer(){
 function formSubmit($AllEvents){
 	$ids = $_POST["events"];
 	$events = array();
-	foreach($ids as $id){
-		$events[$id] = $AllEvents[$id];
+	//foreach($ids as $id){
+		//$events[$id] = $AllEvents[$id];
+
+	$events = array_intersect_key($AllEvents, array_flip($ids)); // This should be more efficient
+	
 	}
 	return $events;
 }
