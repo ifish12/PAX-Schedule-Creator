@@ -82,9 +82,9 @@ function landing(){
 	
 		<div class=\"row\">
 			<div class=\"col-md-6\">
-				<h2>All Events to iCal</h2>
+				<h2>All Events to iCalendar</h2>
 				<p>This takes all the events on the PAX schedule and puts them into a iCalendar file</p>
-				<p><a class=\"btn btn-primary\" href=\"?action=allEvents\">All Events To iCal</a></p>
+				<p><a class=\"btn btn-primary\" href=\"?action=allEvents\">All Events To iCalendar</a></p>
 			</div>
 			<div class=\"col-md-6\">
 				<h2>Choose what events go to iCalendar</h2>
