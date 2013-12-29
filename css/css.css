@@ -1,14 +1,14 @@
-.centre {
-	margin-top: 15%;
-}
-.container{
-	margin-top:2em;
-	margin-bottom:2em;
-}
 .eventContainer{
 	padding-left: 0;
 	padding-right: 0;
 }
 .infoTitle {
 	font-weight: bold;
+}
+.checkbox{
+	display: inline;
+}
+input[type="checkbox"] {
+
+	margin: 0;
 }
