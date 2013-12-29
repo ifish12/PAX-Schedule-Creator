@@ -71,34 +71,38 @@ function formSubmit($AllEvents){
 
 function landing(){
 	$out = headerHTML();
-	$out .= "<div class=\"jumbotron\">
-	<div class=\"container\">
+
+	$out .= <<<EOF
+	<div class=\jumbotron\>
+	<div class="container">
 		<h1>PAX Schedule Creator</h1>
-		<p>This small tool lets you create an <a href=\"http://en.wikipedia.org/wiki/ICalendar\">iCalendar file</a> of the PAX schedule. This works for any PAX event that currently exists. We're going to keep this up to date with the most recent XML file PA gives us. After you have the file you can import it into your favourite calendar program. We've tested it with Calendar(OS X) and Google Calendar and it works flawlessly. The source code can be found <a href=\"https://github.com/ifish12/PAX-Schedule-Creator\">here</a></p>
+		<p>This small tool lets you create an <a href="http://en.wikipedia.org/wiki/ICalendar">iCalendar file</a> of the PAX schedule. This works for any PAX event that currently exists. We're going to keep this up to date with the most recent XML file PA gives us. After you have the file you can import it into your favourite calendar program. We've tested it with Calendar(OS X) and Google Calendar and it works flawlessly. The source code can be found <a href="https://github.com/ifish12/PAX-Schedule-Creator">here</a></p>
 	</div>
 	</div>
 
-	<div class=\"container\">
+	<div class="container">
 	
-		<div class=\"row\">
-			<div class=\"col-md-6\">
+		<div class="row">
+			<div class="col-md-6">
 				<h2>All Events to iCalendar</h2>
 				<p>This takes all the events on the PAX schedule and puts them into a iCalendar file</p>
-				<p><a class=\"btn btn-primary\" href=\"?action=allEvents\">All Events To iCalendar</a></p>
+				<p><a class="btn btn-primary" href="?action=allEvents">All Events To iCalendar</a></p>
 			</div>
-			<div class=\"col-md-6\">
+			<div class="col-md-6">
 				<h2>Choose what events go to iCalendar</h2>
 				<p>This throws you to a list of check boxes which you can then pick and choose what events go into the iCalendar file if you don't want to import every single event into the iCalendar file</p>
-				<p><a class=\"btn btn-danger\" href=\"?action=form\">Choose what events go to iCalendar</a></p>
+				<p><a class="btn btn-danger" href="?action=form">Choose what events go to iCalendar</a></p>
 			</div>
 		</div>
 
 		<hr>
 
 		<footer>
-			<p>Created by <a href=\"http://twitter.com/ifish12\">Geoff Shapiro</a> &amp; <a href=\"https://twitter.com/Scuzzball\">Mark Furland</a></p>
+			<p>Created by <a href="http://twitter.com/ifish12">Geoff Shapiro</a> &amp; <a href="https://twitter.com/Scuzzball">Mark Furland</a></p>
 		</footer>
-	</div> <!-- /container -->";
+	</div> <!-- /container -->
+EOF;
+
 	$out .= footer();
 	return $out;
 }
