@@ -60,12 +60,8 @@ function footer(){
 function formSubmit($AllEvents){
 	$ids = $_POST["events"];
 	$events = array();
-	foreach($AllEvents as $event){
-		foreach($ids as $id){
-			if($event->checkID($id)){
-				$events[] = $event;
-			}
-		}
+	foreach($ids as $id){
+		$events[$id] = $AllEvents[$id];
 	}
 	return $events;
 }
@@ -110,7 +106,7 @@ function parseEvents(){ // This function is our temporary fix for a bigger issue
 
 	$events = array();
 	foreach($scheduleData->panel as $event){
-		$events[] = new Event($event);
+		$events[(int)$event->panelid] = new Event($event);
 	}
 	return $events;
 }
