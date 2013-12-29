@@ -96,7 +96,7 @@ function landing(){
 		<hr>
 
 		<footer>
-			<p>Created by Geoff Shapiro &amp; Mark Furland</p>
+			<p>Created by <a href=\"http://twitter.com/ifish12\">Geoff Shapiro</a> &amp; <a href=\"https://twitter.com/Scuzzball\">Mark Furland</a></p>
 		</footer>
 	</div> <!-- /container -->";
 	$out .= footer();
