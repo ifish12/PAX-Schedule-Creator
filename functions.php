@@ -93,7 +93,7 @@ function landing(){
 		<hr>
 
 		<footer>
-			<p>Lovingly hand crafted by <a href="http://twitter.com/ifish12">Geoff Shapiro</a> &amp; <a href="https://twitter.com/Scuzzball">Mark Furland</a></p>
+			<p>Lovingly handcrafted by <a href="http://twitter.com/ifish12">Geoff Shapiro</a> &amp; <a href="https://twitter.com/Scuzzball">Mark Furland</a></p>
 		</footer>
 	</div> <!-- /container -->
 EOF;
