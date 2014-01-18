@@ -45,6 +45,7 @@ function headerHTML(){
 	$out .= "\t\t<meta charset=\"UTF-8\">\n";
 	$out .= "\t\t<title>iCal Parser</title>\n";
 	$out .= "\t\t<link href=\"css/bootstrap.css\" rel=\"stylesheet\">\n";
+	$out .= "\t\t<link href=\"//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css\" rel=\"stylesheet\">\n"; // font awesome
 	$out .= "\t\t<link href=\"css/css.css\" rel=\"stylesheet\">\n";
 	$out .= "\t</head>\n";
 	$out .= "\t<body>\n";
