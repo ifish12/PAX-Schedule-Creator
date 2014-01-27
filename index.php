@@ -6,7 +6,7 @@ $action = isset($_GET["action"]) ? $_GET["action"] : null;
 
 switch($action){
 	case "allEvents":
-		iCalOut(parseEvents());
+		echo iCalOut(parseEvents());
 		break;
 	case "form":
 		echo form(parseEvents());
