@@ -27,12 +27,17 @@ function iCalOut($events){
  **/
 function form($events){
 	$out = headerHTML();
-	$out .= "\t<form action=\"?action=formSubmit\" method=\"POST\">\n";
-	foreach($events as $event){
-		$out .= $event->formOut();
-	}
-	$out .= "\t<input type=\"submit\" class=\"btn btn-danger\" value=\"Submit\">";
-	$out .= "\t</form>";
+	$out .= "<div class=\"container-fluid\">";
+		$out .= "<div class=\"row\">";
+			$out .= "\t<div class=\"col-sm-3 col-md-2 sidebar\">Sidear?</div>";
+			$out .= "\t<form id=\"form\" class=\"col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main\" action=\"?action=formSubmit\" method=\"POST\">\n";
+			foreach($events as $event){
+				$out .= $event->formOut();
+			}
+			$out .= "\t<input type=\"submit\" class=\"btn btn-danger\" value=\"Submit\">";
+			$out .= "\t</form>";
+		$out .= "\t</div>";
+	$out .= "\t</div>";
 	$out .= footer();
 	return $out;
 }
