@@ -27,10 +27,104 @@ function iCalOut($events){
  **/
 function form($events){
 	$out = headerHTML();
-	$out .= "<div class=\"container-fluid\">";
-		$out .= "<div class=\"row\">";
-			$out .= "\t<div class=\"col-sm-3 col-md-2 sidebar\">Sidear?</div>";
-			$out .= "\t<form id=\"form\" class=\"col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main\" action=\"?action=formSubmit\" method=\"POST\">\n";
+	$out .= <<<STUFF
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<div class="panel-group" id="days">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#days" href="#Friday">
+									Friday
+								</a>
+							</h4>
+						</div>
+						<div id="Friday" class="panel-collapse collapse in">
+							<div class="panel-body">
+								Checkoxes Friday
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#days" href="#Saturday">
+									Saturday
+								</a>
+							</h4>
+						</div>
+						<div id="Saturday" class="panel-collapse collapse">
+							<div class="panel-body">
+								Checkoxes Saturday
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#days" href="#Sunday">
+									Sunday
+								</a>
+							</h4>
+						</div>
+						<div id="Sunday" class="panel-collapse collapse">
+							<div class="panel-body">
+								Checkoxes Sunday
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#days" href="#Monday">
+									Monday
+								</a>
+							</h4>
+						</div>
+						<div id="Monday" class="panel-collapse collapse">
+							<div class="panel-body">
+								Checkoxes Monday
+							</div>
+						</div>
+					</div>
+				</div><!--end days-->
+
+
+				<div class="panel panel-default"><!--Location-->
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" href="#Location">
+								Location
+							</a>
+						</h4>
+					</div>
+					<div id="Location" class="panel-collapse collapse">
+						<div class="panel-body">
+							Checkoxes Location
+						</div>
+					</div>
+				</div><!--End Location-->
+
+
+				<div class="panel panel-default"><!--Track-->
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" href="#Track">
+								Track
+							</a>
+						</h4>
+					</div>
+					<div id="Track" class="panel-collapse collapse">
+						<div class="panel-body">
+							Checkoxes Track
+						</div>
+					</div>
+				</div><!--End Track-->
+
+			</div><!--End sidebar-->
+			<form id="form" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" action="?action=formSubmit" method="POST">
+STUFF;
 			foreach($events as $event){
 				$out .= $event->formOut();
 			}
@@ -43,20 +137,20 @@ function form($events){
 }
 
 function headerHTML(){
-	$out = "";
-	$out .= "<!DOCTYPE html>\n";
-	$out .= "<html>\n";
-	$out .= "\t<head>\n";
-	$out .= "\t\t<meta charset=\"UTF-8\">\n";
-	$out .= "\t\t<title>iCal Parser</title>\n";
-	$out .= "\t\t<link href=\"css/bootstrap.css\" rel=\"stylesheet\">\n";
-	$out .= "\t\t<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js\"></script>\n";
-	$out .= "\t\t<script src=\"js/bootstrap.min.js\"></script>\n";
-	$out .= "\t\t<link href=\"//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css\" rel=\"stylesheet\">\n"; // font awesome
-	$out .= "\t\t<link href=\"css/css.css\" rel=\"stylesheet\">\n";
-	$out .= "\t</head>\n";
-	$out .= "\t<body>\n";
-	return $out;
+	return <<<HEAD
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>iCal Parser</title>
+			<link href="css/bootstrap.css" rel="stylesheet">
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+			<script src="js/bootstrap.js" type="text/javascript"></script>
+			<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+			<link href="css/css.css" rel="stylesheet">
+		</head>
+		<body>
+HEAD;
 }
 function footer(){
 	$out = "";
