@@ -28,6 +28,7 @@ function iCalOut($events){
 function form($events){
 	$out = headerHTML();
 	$out .= <<<STUFF
+	<script src="js/filter.js" type="text/javascript"></script><!--Maybe move this to headerHTML someday-->
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-3 col-md-2 sidebar">
@@ -42,7 +43,7 @@ function form($events){
 						</div>
 						<div id="Friday" class="panel-collapse collapse in">
 							<div class="panel-body">
-								Checkoxes Friday
+								<label><input id="bullshit" class="filterCheckbox" type="checkbox" name="1000" value="1000">10:00-11:00</label><br>
 							</div>
 						</div>
 					</div>
