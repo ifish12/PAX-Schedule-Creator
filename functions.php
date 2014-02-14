@@ -149,6 +149,14 @@ function headerHTML(){
 			<script src="js/bootstrap.js" type="text/javascript"></script>
 			<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 			<link href="css/css.css" rel="stylesheet">
+			<script>
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+				ga('create', 'UA-48072408-1', 'uvm.edu');
+				ga('send', 'pageview');
+			</script>
 		</head>
 		<body>
 HEAD;
