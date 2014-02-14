@@ -197,14 +197,14 @@ function landing(){
 			<div class="col-md-6">
 				<h2>Choose what events go to iCalendar</h2>
 				<p>This throws you to a list of check boxes which you can then pick and choose what events go into the iCalendar file if you don't want to import every single event into the iCalendar file</p>
-				<p><a class="btn btn-danger" href="?action=form">Choose what events go to iCalendar</a></p>
+				<p><a class="btn btn-success" href="?action=form">Choose what events go to iCalendar</a></p>
 			</div>
 		</div>
 
 		<hr>
 
 		<footer>
-			<p>Lovingly handcrafted by <a href="http://twitter.com/ifish12">Geoff Shapiro</a> &amp; <a href="https://twitter.com/Scuzzball">Mark Furland</a></p>
+			<p>Lovingly handcrafted by <a href="http://twitter.com/ifish12">Geoff Shapiro</a> &amp; <a href="https://github.com/Scuzzball">Mark Furland</a></p>
 		</footer>
 	</div> <!-- /container -->
 EOF;
