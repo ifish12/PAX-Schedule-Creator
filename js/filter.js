@@ -1,6 +1,7 @@
-
-alert("Loaded and shit");
-//Checkbox function
-$('#bullshit').change(function() {
-	alert("Woo");
+$(document).ready(function(){
+	//Checkbox function
+	$('#sidebar :checkbox').click(function () {
+		alert("Woo");
+		alert(this.value);
+	});
 });
