@@ -199,9 +199,8 @@ function footer(){
 		</body>
 
 	</html>
-
-	return $out;
 FOOT;
+return $out;
 }
 
 function formSubmit($AllEvents){
