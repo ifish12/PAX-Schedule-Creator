@@ -206,7 +206,7 @@ return $out;
 function formSubmit($AllEvents){
 	$ids = $_POST["events"];
 	$events = array();
-	$events = array_intersect_key($AllEvents, array_flip($ids)); // This should be more efficient
+	$events = array_intersect_key($AllEvents, array_flip($ids)); // This IS more efficient
 	return $events;
 }
 
