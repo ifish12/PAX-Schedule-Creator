@@ -200,7 +200,6 @@ function footer(){
 
 	</html>
 FOOT;
-return $out;
 }
 
 function formSubmit($AllEvents){
