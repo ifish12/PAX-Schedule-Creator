@@ -30,7 +30,6 @@ function iCalOut($events){
 function form($events){
 	$out = headerHTML();
 	$out .= <<<STUFF
-	<script src="js/filter.js" type="text/javascript"></script><!--Maybe move this to headerHTML someday-->
 	<div class="container-fluid">
 		<div class="row">
 			<div id="sidebar" class="col-sm-3 col-md-2 sidebar">
@@ -164,8 +163,6 @@ function headerHTML(){
 			<meta charset="UTF-8">
 			<title>iCal Parser</title>
 			<link href="css/bootstrap.css" rel="stylesheet">
-			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-			<script src="js/bootstrap.js" type="text/javascript"></script>
 			<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 			<link href="css/css.css" rel="stylesheet">
 <script>
@@ -192,10 +189,19 @@ pageTracker._trackPageview();
 HEAD;
 }
 function footer(){
-	$out = "";
-	$out .= "\t</body>\n";
-	$out .= "</html>\n";
+	$out .= <<<FOOT
+		<footer>
+			<p>Lovingly handcrafted by <a href="http://twitter.com/ifish12">Geoff Shapiro</a> &amp; <a href="https://github.com/Scuzzball">Mark Furland</a></p>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+			<script src="js/bootstrap.js" type="text/javascript"></script>
+			<script src="js/filter.js" type="text/javascript"></script>
+		</footer>
+		</body>
+
+	</html>
+
 	return $out;
+FOOT;
 }
 
 function formSubmit($AllEvents){
@@ -233,9 +239,7 @@ function landing(){
 
 		<hr>
 
-		<footer>
-			<p>Lovingly handcrafted by <a href="http://twitter.com/ifish12">Geoff Shapiro</a> &amp; <a href="https://github.com/Scuzzball">Mark Furland</a></p>
-		</footer>
+		
 	</div> <!-- /container -->
 EOF;
 
