@@ -30,7 +30,7 @@ function iCalOut($events){
 function form($events){
 	$out = headerHTML();
 	$out .= <<<STUFF
-	<div class="container-fluid">
+	<div class="container-fluid"> <!--This closes in the footer -->
 		<div class="row">
 			<div id="sidebar" class="col-sm-3 col-md-2 sidebar">
 				<div class="panel-group" id="days">
@@ -189,7 +189,7 @@ pageTracker._trackPageview();
 HEAD;
 }
 function footer(){
-	$out .= <<<FOOT
+	return <<<FOOT
 		<footer>
 			<p>Lovingly handcrafted by <a href="http://twitter.com/ifish12">Geoff Shapiro</a> &amp; <a href="https://github.com/Scuzzball">Mark Furland</a></p>
 		</div> <!-- /container -->
