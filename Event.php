@@ -110,8 +110,10 @@ class Event {
 	 * returns part of a form for output
 	 **/
 	function formOut(){
-		$out = "";
-		$out .= "<div class=\"panel panel-default eventContainer\">\n";
+		$out = <<<THING
+	<div class="panel panel-default eventContainer">
+		<div class="hidden">{"day":"F","time":"1100","theatre":"main"}</div>
+THING;
 			$out .= "\t<div class=\"panel-heading\">\n";
 				$out .= "\t\t<label class=\"panel-title eventTitle\">\n";
 				$out .= "\t\t\t<input type=\"checkbox\" id=\"" . $this->id . "\" class=\"checkbox\" name=\"events[]\" value=\"" . $this->id . "\">\n";
