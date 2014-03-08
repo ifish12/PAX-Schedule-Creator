@@ -8,12 +8,10 @@ $(document).ready(function(){
 		time = this.value;
 		if(this.checked){//add to array
 			times.push(day + time);
-			alert("added " + day + time);
 		}else{//Remove from array
 			var index = times.indexOf(day + time);
 			if (index > -1){
 				times.splice(index, 1);
-				alert("removed " + day + time);
 			}
 		}
 
@@ -24,11 +22,16 @@ $(document).ready(function(){
 function filter(){
 	$('.eventContainer').each(function(i, obj) {
 		eventData = JSON.parse(obj.children[0].innerHTML);
-		console.log(eventData.day + eventData.time);
-		if(-1 == times.indexOf(eventData.day + eventData.time)){//In filter, show
-			obj.style.display = "inline";
-		}else{//Hide
-			obj.style.display = "hide";
-		}
+
+		if(times.length >= 1){//Times array is not empty, filer by it
+			if(-1 != times.indexOf(eventData.day + eventData.time)){//In filter, show
+				obj.style.display = "inherit";
+			}else{//Hide
+				obj.style.display = "none";
+			}
+		}else{//No time filtering, show all
+			obj.style.display = "inherit";
+		}//Done with time filtering
+
 	});
 }
