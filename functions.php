@@ -56,11 +56,6 @@ function form($events){
 							<label><input type="checkbox" name="20" value="20">20:00-21:00</label>
 							<label><input type="checkbox" name="21" value="21">21:00-22:00</label>
 							<label><input type="checkbox" name="22" value="22">22:00-23:00</label>
-							<label><input type="checkbox" name="23" value="23">23:00-24:00</label>
-							<label><input type="checkbox" name="24" value="24">24:00-01:00</label>
-							<!--TODO: Consider changing 01:00-02:00 the leading day because technicalities-->
-							<label><input type="checkbox" name="01" value="01">01:00-02:00</label>
-							<label><input type="checkbox" name="02" value="02">02:00-03:00</label> 
 						</div>
 					</div>
 				</div>
@@ -87,11 +82,6 @@ function form($events){
 							<label><input type="checkbox" name="20" value="20">20:00-21:00</label>
 							<label><input type="checkbox" name="21" value="21">21:00-22:00</label>
 							<label><input type="checkbox" name="22" value="22">22:00-23:00</label>
-							<label><input type="checkbox" name="23" value="23">23:00-24:00</label>
-							<label><input type="checkbox" name="24" value="24">24:00-01:00</label>
-							<!--TODO: Consider changing 01:00-02:00 the leading day because technicalities-->
-							<label><input type="checkbox" name="01" value="01">01:00-02:00</label>
-							<label><input type="checkbox" name="02" value="02">02:00-03:00</label> 
 						</div>
 					</div>
 				</div>
@@ -118,11 +108,6 @@ function form($events){
 							<label><input type="checkbox" name="20" value="20">20:00-21:00</label>
 							<label><input type="checkbox" name="21" value="21">21:00-22:00</label>
 							<label><input type="checkbox" name="22" value="22">22:00-23:00</label>
-							<label><input type="checkbox" name="23" value="23">23:00-24:00</label>
-							<label><input type="checkbox" name="24" value="24">24:00-01:00</label>
-							<!--TODO: Consider changing 01:00-02:00 the leading day because technicalities-->
-							<label><input type="checkbox" name="01" value="01">01:00-02:00</label>
-							<label><input type="checkbox" name="02" value="02">02:00-03:00</label> 
 						</div>
 					</div>
 				</div>
@@ -149,11 +134,6 @@ function form($events){
 							<label><input type="checkbox" name="20" value="20">20:00-21:00</label>
 							<label><input type="checkbox" name="21" value="21">21:00-22:00</label>
 							<label><input type="checkbox" name="22" value="22">22:00-23:00</label>
-							<label><input type="checkbox" name="23" value="23">23:00-24:00</label>
-							<label><input type="checkbox" name="24" value="24">24:00-01:00</label>
-							<!--TODO: Consider changing 01:00-02:00 the leading day because technicalities-->
-							<label><input type="checkbox" name="01" value="01">01:00-02:00</label>
-							<label><input type="checkbox" name="02" value="02">02:00-03:00</label> 
 						</div>
 					</div>
 				</div>
