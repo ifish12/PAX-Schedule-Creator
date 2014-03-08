@@ -44,24 +44,24 @@ function form($events){
 						</div>
 						<div id="Friday" class="panel-collapse collapse">
 							<div class="panel-body">
-								<label><input type="checkbox" name="1000" value="1000">10:00-11:00</label>
-								<label><input type="checkbox" name="1100" value="1100">11:00-12:00</label>
-								<label><input type="checkbox" name="1200" value="1200">12:00-13:00</label>
-								<label><input type="checkbox" name="1300" value="1300">13:00-14:00</label>
-								<label><input type="checkbox" name="1400" value="1400">14:00-15:00</label>
-								<label><input type="checkbox" name="1500" value="1500">15:00-16:00</label>
-								<label><input type="checkbox" name="1600" value="1600">16:00-17:00</label>
-								<label><input type="checkbox" name="1700" value="1700">17:00-18:00</label>
-								<label><input type="checkbox" name="1800" value="1800">18:00-19:00</label>
-								<label><input type="checkbox" name="1900" value="1900">19:00-20:00</label>
-								<label><input type="checkbox" name="2000" value="2000">20:00-21:00</label>
-								<label><input type="checkbox" name="2100" value="2100">21:00-22:00</label>
-								<label><input type="checkbox" name="2200" value="2200">22:00-23:00</label>
-								<label><input type="checkbox" name="2300" value="2300">23:00-24:00</label>
-								<label><input type="checkbox" name="2400" value="2400">24:00-01:00</label>
+								<label><input type="checkbox" name="10" value="10">10:00-11:00</label>
+								<label><input type="checkbox" name="11" value="11">11:00-12:00</label>
+								<label><input type="checkbox" name="12" value="12">12:00-13:00</label>
+								<label><input type="checkbox" name="13" value="13">13:00-14:00</label>
+								<label><input type="checkbox" name="14" value="14">14:00-15:00</label>
+								<label><input type="checkbox" name="15" value="15">15:00-16:00</label>
+								<label><input type="checkbox" name="16" value="16">16:00-17:00</label>
+								<label><input type="checkbox" name="17" value="17">17:00-18:00</label>
+								<label><input type="checkbox" name="18" value="18">18:00-19:00</label>
+								<label><input type="checkbox" name="19" value="19">19:00-20:00</label>
+								<label><input type="checkbox" name="20" value="20">20:00-21:00</label>
+								<label><input type="checkbox" name="21" value="21">21:00-22:00</label>
+								<label><input type="checkbox" name="22" value="22">22:00-23:00</label>
+								<label><input type="checkbox" name="23" value="23">23:00-24:00</label>
+								<label><input type="checkbox" name="24" value="24">24:00-01:00</label>
 								<!--TODO: Consider changing 01:00-02:00 the leading day because technicalities-->
-								<label><input type="checkbox" name="0100" value="0100">01:00-02:00</label>
-								<label><input type="checkbox" name="0200" value="0200">02:00-03:00</label> 
+								<label><input type="checkbox" name="01" value="01">01:00-02:00</label>
+								<label><input type="checkbox" name="02" value="02">02:00-03:00</label> 
 							</div>
 						</div>
 					</div>
