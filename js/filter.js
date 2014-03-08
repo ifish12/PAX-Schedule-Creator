@@ -17,6 +17,10 @@ $(document).ready(function(){
 
 		filter();
 	});
+
+	$( "input:checked" ).each(function(i,obj){
+		obj.checked = false;
+	});
 });
 
 function filter(){
