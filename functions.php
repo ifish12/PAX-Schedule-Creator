@@ -174,15 +174,6 @@ function headerHTML(){
   ga('create', 'UA-48072408-1', 'mfurland.w3.uvm.edu/ical');
   ga('send', 'pageview');
 
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-48072408-1']);
-_gaq.push(['_setDomainName', 'mfurland.w3.uvm.edu/ical']);
-_gaq.push(['_trackPageview']);
-
-var pageTracker = _gat._getTracker('UA-48072408-1');
-pageTracker._setDomainName('mfurland.w3.uvm.edu/ical');
-pageTracker._trackPageview();
-
 </script>
 		</head>
 		<body>
@@ -192,7 +183,6 @@ function footer(){
 	return <<<FOOT
 		<footer>
 			<p>Lovingly handcrafted by <a href="http://twitter.com/ifish12">Geoff Shapiro</a> &amp; <a href="https://github.com/Scuzzball">Mark Furland</a></p>
-		</div> <!-- /container -->
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 			<script src="js/bootstrap.js" type="text/javascript"></script>
 			<script src="js/filter.js" type="text/javascript"></script>
