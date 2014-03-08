@@ -30,116 +30,82 @@ function iCalOut($events){
 function form($events){
 	$out = headerHTML();
 	$out .= <<<STUFF
-	<div class="container-fluid"> <!--This closes in the footer -->
+	<div class="container-fluid">
 		<div class="row">
 			<div id="sidebar" class="col-sm-3 col-md-2 sidebar">
-				<div class="panel-group" id="days">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h4 class="panel-title">
-								<a data-toggle="collapse" data-parent="#days" href="#Friday">
-									Friday
-								</a>
-							</h4>
-						</div>
-						<div id="Friday" class="panel-collapse collapse">
-							<div class="panel-body">
-								<label><input type="checkbox" name="10" value="10">10:00-11:00</label>
-								<label><input type="checkbox" name="11" value="11">11:00-12:00</label>
-								<label><input type="checkbox" name="12" value="12">12:00-13:00</label>
-								<label><input type="checkbox" name="13" value="13">13:00-14:00</label>
-								<label><input type="checkbox" name="14" value="14">14:00-15:00</label>
-								<label><input type="checkbox" name="15" value="15">15:00-16:00</label>
-								<label><input type="checkbox" name="16" value="16">16:00-17:00</label>
-								<label><input type="checkbox" name="17" value="17">17:00-18:00</label>
-								<label><input type="checkbox" name="18" value="18">18:00-19:00</label>
-								<label><input type="checkbox" name="19" value="19">19:00-20:00</label>
-								<label><input type="checkbox" name="20" value="20">20:00-21:00</label>
-								<label><input type="checkbox" name="21" value="21">21:00-22:00</label>
-								<label><input type="checkbox" name="22" value="22">22:00-23:00</label>
-								<label><input type="checkbox" name="23" value="23">23:00-24:00</label>
-								<label><input type="checkbox" name="24" value="24">24:00-01:00</label>
-								<!--TODO: Consider changing 01:00-02:00 the leading day because technicalities-->
-								<label><input type="checkbox" name="01" value="01">01:00-02:00</label>
-								<label><input type="checkbox" name="02" value="02">02:00-03:00</label> 
-							</div>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h4 class="panel-title">
-								<a data-toggle="collapse" data-parent="#days" href="#Saturday">
-									Saturday
-								</a>
-							</h4>
-						</div>
-						<div id="Saturday" class="panel-collapse collapse">
-							<div class="panel-body">
-								Checkoxes Saturday
-							</div>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h4 class="panel-title">
-								<a data-toggle="collapse" data-parent="#days" href="#Sunday">
-									Sunday
-								</a>
-							</h4>
-						</div>
-						<div id="Sunday" class="panel-collapse collapse">
-							<div class="panel-body">
-								Checkoxes Sunday
-							</div>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h4 class="panel-title">
-								<a data-toggle="collapse" data-parent="#days" href="#Monday">
-									Monday
-								</a>
-							</h4>
-						</div>
-						<div id="Monday" class="panel-collapse collapse">
-							<div class="panel-body">
-								Checkoxes Monday
-							</div>
-						</div>
-					</div>
-				</div><!--end days-->
-
-
-				<div class="panel panel-default"><!--Location-->
+				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a data-toggle="collapse" href="#Location">
-								Location
+							<a data-toggle="collapse" href="#Friday">
+								Friday
 							</a>
 						</h4>
 					</div>
-					<div id="Location" class="panel-collapse collapse">
+					<div id="Friday" class="panel-collapse collapse">
 						<div class="panel-body">
-							Checkoxes Location
+							<label><input type="checkbox" name="10" value="10">10:00-11:00</label>
+							<label><input type="checkbox" name="11" value="11">11:00-12:00</label>
+							<label><input type="checkbox" name="12" value="12">12:00-13:00</label>
+							<label><input type="checkbox" name="13" value="13">13:00-14:00</label>
+							<label><input type="checkbox" name="14" value="14">14:00-15:00</label>
+							<label><input type="checkbox" name="15" value="15">15:00-16:00</label>
+							<label><input type="checkbox" name="16" value="16">16:00-17:00</label>
+							<label><input type="checkbox" name="17" value="17">17:00-18:00</label>
+							<label><input type="checkbox" name="18" value="18">18:00-19:00</label>
+							<label><input type="checkbox" name="19" value="19">19:00-20:00</label>
+							<label><input type="checkbox" name="20" value="20">20:00-21:00</label>
+							<label><input type="checkbox" name="21" value="21">21:00-22:00</label>
+							<label><input type="checkbox" name="22" value="22">22:00-23:00</label>
+							<label><input type="checkbox" name="23" value="23">23:00-24:00</label>
+							<label><input type="checkbox" name="24" value="24">24:00-01:00</label>
+							<!--TODO: Consider changing 01:00-02:00 the leading day because technicalities-->
+							<label><input type="checkbox" name="01" value="01">01:00-02:00</label>
+							<label><input type="checkbox" name="02" value="02">02:00-03:00</label> 
 						</div>
 					</div>
-				</div><!--End Location-->
-
-
-				<div class="panel panel-default"><!--Track-->
+				</div>
+				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a data-toggle="collapse" href="#Track">
-								Track
+							<a data-toggle="collapse" href="#Saturday">
+								Saturday
 							</a>
 						</h4>
 					</div>
-					<div id="Track" class="panel-collapse collapse">
+					<div id="Saturday" class="panel-collapse collapse">
 						<div class="panel-body">
-							Checkoxes Track
+							Checkoxes Saturday
 						</div>
 					</div>
-				</div><!--End Track-->
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" href="#Sunday">
+								Sunday
+							</a>
+						</h4>
+					</div>
+					<div id="Sunday" class="panel-collapse collapse">
+						<div class="panel-body">
+							Checkoxes Sunday
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" href="#Monday">
+								Monday
+							</a>
+						</h4>
+					</div>
+					<div id="Monday" class="panel-collapse collapse">
+						<div class="panel-body">
+							Checkoxes Monday
+						</div>
+					</div>
+				</div>
 
 			</div><!--End sidebar-->
 			<form id="form" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" action="?action=formSubmit" method="POST">

@@ -1,5 +1,4 @@
 var times = new Array();
-var theatres = new Array();
 
 $(document).ready(function(){
 	//Checkbox function
