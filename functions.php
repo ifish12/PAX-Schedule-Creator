@@ -42,7 +42,7 @@ function form($events){
 								</a>
 							</h4>
 						</div>
-						<div id="Friday" class="panel-collapse collapse in">
+						<div id="Friday" class="panel-collapse collapse">
 							<div class="panel-body">
 								<label><input type="checkbox" name="1000" value="1000">10:00-11:00</label>
 								<label><input type="checkbox" name="1100" value="1100">11:00-12:00</label>
