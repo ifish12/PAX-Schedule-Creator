@@ -23,8 +23,8 @@ class Event {
 		$startTime = $matches[1];
 		$endTime = $matches[2];
 		
-		$this->startDateTime = new DateTime("2013-08-30 " . $startTime);
-		$this->endDateTime = new DateTime("2013-08-30 " . $endTime);
+		$this->startDateTime = new DateTime("2013-08-30 " . $startTime,timezone_open("EST"));
+		$this->endDateTime = new DateTime("2013-08-30 " . $endTime,timezone_open("EST"));
 		
 		
 		if($data->panelday == "Saturday"){//If it's on saturday
