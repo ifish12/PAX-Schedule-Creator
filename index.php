@@ -30,6 +30,9 @@ switch($action){
 		$selectedEvents = formSubmit(parseEvents());
 		iCalOut($selectedEvents);
 		break;
+	case "about":
+		echo about();
+		break;
 	default:
 		echo landing();
 }

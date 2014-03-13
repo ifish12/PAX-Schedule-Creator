@@ -245,3 +245,10 @@ function parseEvents(){ // This function is our temporary fix for a bigger issue
 	}
 	return $events;
 }
+
+
+function about(){
+	return <<<ABOUT
+About and stuff
+ABOUT;
+}
