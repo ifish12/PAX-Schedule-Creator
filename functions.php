@@ -260,7 +260,11 @@ function parseEvents(){ // This function is our temporary fix for a bigger issue
 
 
 function about(){
-	return <<<ABOUT
+	$out = headerHTML();
+	$out .= <<<ABOUT
 About and stuff
 ABOUT;
+	$out .= footerText();
+	$out .= footer();
+	return $out;
 }
