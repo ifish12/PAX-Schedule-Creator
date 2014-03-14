@@ -265,7 +265,51 @@ function parseEvents(){ // This function is our temporary fix for a bigger issue
 function about(){
 	$out = headerHTML();
 	$out .= <<<ABOUT
-About and stuff
+		<div class="jumbotron">
+			<div class="container">
+				<h1>Want to know more about this project?</h1>
+				<p>On this page you will read about the developement of this project, how this project all started, and even how Mark met Geoff. 
+				<br>It's a pretty interesting story so read on if you're interested</p>
+			</div>
+			</div>
+
+			<div class="container">
+			
+				<div class="row">
+					<div class="col-md-12">
+						<h2>How Mark and Geoff met</h2>
+						<p>This is actually a pretty cool story considering where this is being written.
+						<br>So, Mark in March of 2013 made a similar thing to this, it was way simpler though, you can find it <a href="http://pastebin.com/Lerwg7wT">here</a>.
+						<br>Geoff actually had the same exact idea and did a Google search before he started coding his own version, and he found the version Mark had made.
+						<br>At the time, Mark's version had his full name on it, so Geoff found his Facebook and sent him a message, though Mark never checks Facebook so it went unnoticed until around summer of 2013
+						<br>Geoff figured Mark wouldn't respond to the message and then made his own, which can be found <a href="https://github.com/ifish12/PaxSchedule-To-ICS">here</a>.
+						<br>Anyway, so in summer 2013, Mark finally contacts Geoff back through Facebook and they exchange Skype contacts, and eventually they start to talk often and actually get pretty close
+						</p>
+					</div>
+					<div class="col-md-12">
+						<h2>How we got the idea to make this version.</h2>
+						<p>You might be thinking something along the lines of "Wait, if you both already made your own versions of the same thing, why did you want to make this?" and that's a very good question!
+						<br>Well, Geoff often hangs out in the #PAX IRC on the Slashnet network and <a href="https://twitter.com/h_e_e_l_s">Khahil White</a> approached Geoff saying he heard about the previous version he made and he was interested in Geoff making a faux-official one. Geoff doesn't really like working alone on projects, 
+						specailly not somewhat big ones, so he reached out to Mark to see if he'd want to help out. Geoff figured Mark would be great because he already knows how the iCalendar format works.
+						<br>So that's how we got this idea for this project.
+						<br>Also both versions Mark and Geoff both made kind of SUCKED in comparison to this anyway.
+						<br>Khahil also approached Geoff a few days before PAX Prime 2013(if you care about keeping a timeline).</p>
+					</div>
+					<div class="col-md-12">
+						<h2>How the actual developement went down and what we experienced</h2>
+						<p>Anyway, in September of 2013 Khahil sent Mark and Geoff the XML file of the PAX schedule. So we started working on an actual prototype. 
+						<br>We actually finished the prototype in a span of two days. It didn't take very long at all. Though our design was awful and the functionality was pretty barebones.
+						<br>We had the functions to export everything into an iCalendar file, or a big list like we do now, but instead of having filtering, it was just a big list. Nobody has time to scroll through all of that data.
+						<br>So, for a few months we just let it sit there. Around November we designed to rehaul the design using <a href="http://getbootstrap.com/">Bootstrap</a> because the way it was before was just disgusting. 
+						<br>So in December of 2013 we got in touch with <a href="https://twitter.com/coffmandave">David Coffman</a> to talk about the XML we got from them because he maintained it.
+						<br>David was actually a big influence and help with the entire project. Anyway, so after rehauling the entire design we were stumped for a few months. We kept thinking "What should we do now?"
+						<br>This was both of our first "real" products and we wanted to use this as a time to learn things. We worked on optimization, made it as efficient as we possibly could. It was a huge learning experinece.
+						<br>Then we implemented a caching mechanism. Mainly to help increase efficiency under high loads. After that, we did the hardest part which was arguably getting filtering to work.
+						<br>Filtering was implemented fully in around March of 2014 and it was a challenge for both Mark and Geoff. A series of small dumb mistakes but eventually leading to success.
+						<br>This entire project was a huge learning experience for both of us and we'd like to thank Khahil for giving us this idea and chance to do this.</p>
+					</div>
+				</div>
+				<hr>
 ABOUT;
 	$out .= footerText();
 	$out .= footer();
