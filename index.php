@@ -14,13 +14,11 @@ $cache = new Cache();
 switch($action){
 	case "allEvents":
 		if($cache->exists("ical")){
-			echo "had it";
-			echo $cache->get("ical");
+			echo outputICal($cache->get("ical"));
 		}else{
-			echo "set it";
-			$ical = iCalOut(parseEvents());
+			$ical = makeICal(parseEvents());
 			$cache->setCache("ical",$ical);
-			echo $ical;
+			echo outputICal($ical);
 		}
 		break;
 	case "form":
@@ -28,7 +26,7 @@ switch($action){
 		break;
 	case "formSubmit":
 		$selectedEvents = formSubmit(parseEvents());
-		iCalOut($selectedEvents);
+		outputICal(makeICal($selectedEvents));
 		break;
 	case "about":
 		echo about();

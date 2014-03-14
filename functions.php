@@ -3,10 +3,10 @@
 $START_DAY = "2014-04-11";
 $XML_LOCATION = "GuidebookSchedule.xml";
 /**
- * iCalOut creates the ical for the given events and outputs it
+ * makeICal creates the ical for the given events
  * @param events Events to turn into ical
  **/
-function iCalOut($events){
+function makeICal($events){
 	$ical = "";
 	$ical .= "BEGIN:VCALENDAR\r\n";
 	$ical .= "VERSION:2.0\r\n";
@@ -15,11 +15,14 @@ function iCalOut($events){
 		$ical .= $event->vEvent();
 	}
 	$ical .= "END:VCALENDAR";
+	return $ical;
+}
 
+function outputICal($ical){
 	//set correct content-type-header
 	header('Content-type: text/calendar; charset=utf-8');
 	header('Content-Disposition: inline; filename=calendar.ics');
-	return $ical;
+	echo $ical;
 }
 
 
