@@ -220,6 +220,7 @@ function landing(){
 		<h1>PAX Schedule Creator</h1>
 		<p>This tool lets you create an <a href="http://en.wikipedia.org/wiki/ICalendar">iCalendar file</a>(The standard calendar file format) of the PAX schedule. This will be kept up to date with the most recent XML schedule we can get from Penny Arcade, usually about a month before the convention.
 		<br>This tool is not affilaited with Penny Arcade or PAX, it is merely a community tool to help people keep track of events at PAX.
+		<br>If you would like to know more about this project and the developers you can read about them <a href="http://paxschedule.com/?action=about">here</a></p>
 		<br>The source code can be found <a href="https://github.com/ifish12/PAX-Schedule-Creator">here</a></p>
 	</div>
 	</div>
