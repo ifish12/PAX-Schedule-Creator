@@ -1,4 +1,7 @@
 <?PHP
+
+$START_DAY = "2014-04-11";
+$XML_LOCATION = "GuidebookSchedule.xml";
 /**
  * iCalOut creates the ical for the given events and outputs it
  * @param events Events to turn into ical
@@ -235,9 +238,9 @@ EOF;
 	return $out;
 }
 
-function parseEvents(){ // This function is our temporary fix for a bigger issue. 
-	$xmlLocation = "http://hw1.pa-cdn.com/pax/resources/guidebookschedule.xml";
-	$scheduleData = new SimpleXMLElement($xmlLocation, NULL, TRUE);
+function parseEvents(){ // This function is our temporary fix for a bigger issue.
+	global $XML_LOCATION;
+	$scheduleData = new SimpleXMLElement($XML_LOCATION, NULL, TRUE);
 
 	$events = array();
 	foreach($scheduleData->panel as $event){

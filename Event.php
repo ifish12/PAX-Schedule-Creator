@@ -1,7 +1,7 @@
 <?PHP
 class Event {
 
-    var $title;
+	var $title;
 	var $id;
 	var $startDateTime;
 	var $endDateTime;
@@ -22,9 +22,11 @@ class Event {
 		preg_match('/(.+(?:am|pm)) - (.+(?:am|pm))/', $data->paneltime, $matches);
 		$startTime = $matches[1];
 		$endTime = $matches[2];
-		
-		$this->startDateTime = new DateTime("2013-08-30 " . $startTime,timezone_open("EST"));
-		$this->endDateTime = new DateTime("2013-08-30 " . $endTime,timezone_open("EST"));
+
+		global $START_DAY;
+
+		$this->startDateTime = new DateTime($START_DAY . $startTime,timezone_open("EST"));
+		$this->endDateTime = new DateTime($START_DAY . $endTime,timezone_open("EST"));
 		
 		
 		if($data->panelday == "Saturday"){//If it's on saturday
