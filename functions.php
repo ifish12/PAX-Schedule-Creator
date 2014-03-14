@@ -301,7 +301,7 @@ function about(){
 						<p>Anyway, in September of 2013 Khahil sent Mark and Geoff the XML file of the PAX schedule. So we started working on an actual prototype. 
 						<br>We actually finished the prototype in a span of two days. It didn't take very long at all. Though our design was awful and the functionality was pretty barebones.
 						<br>We had the functions to export everything into an iCalendar file, or a big list like we do now, but instead of having filtering, it was just a big list. Nobody has time to scroll through all of that data.
-						<br>So, for a few months we just let it sit there. Around November we designed to rehaul the design using <a href="http://getbootstrap.com/">Bootstrap</a> because the way it was before was just disgusting. 
+						<br>So, for a few months we just let it sit there. Around November we decided to rehaul the design using <a href="http://getbootstrap.com/">Bootstrap</a> because the way it was before was just disgusting. 
 						<br>So in December of 2013 we got in touch with <a href="https://twitter.com/coffmandave">David Coffman</a> to talk about the XML we got from them because he maintained it.
 						<br>David was actually a big influence and help with the entire project. Anyway, so after rehauling the entire design we were stumped for a few months. We kept thinking "What should we do now?"
 						<br>This was Geoff's first "real" products and we wanted to use this as a time to learn things. We worked on optimization, made it as efficient as we possibly could. It was a huge learning experinece.
