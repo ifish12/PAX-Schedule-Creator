@@ -59,6 +59,7 @@ function form($events){
 							<label><input type="checkbox" name="20" value="20">20:00-21:00</label>
 							<label><input type="checkbox" name="21" value="21">21:00-22:00</label>
 							<label><input type="checkbox" name="22" value="22">22:00-23:00</label>
+							<label><input type="checkbox" name="23" value="22">23:00-00:00</label>
 						</div>
 					</div>
 				</div>
@@ -85,6 +86,7 @@ function form($events){
 							<label><input type="checkbox" name="20" value="20">20:00-21:00</label>
 							<label><input type="checkbox" name="21" value="21">21:00-22:00</label>
 							<label><input type="checkbox" name="22" value="22">22:00-23:00</label>
+							<label><input type="checkbox" name="23" value="22">23:00-00:00</label>
 						</div>
 					</div>
 				</div>
@@ -111,10 +113,11 @@ function form($events){
 							<label><input type="checkbox" name="20" value="20">20:00-21:00</label>
 							<label><input type="checkbox" name="21" value="21">21:00-22:00</label>
 							<label><input type="checkbox" name="22" value="22">22:00-23:00</label>
+							<label><input type="checkbox" name="23" value="22">23:00-00:00</label>
 						</div>
 					</div>
 				</div>
-				<div class="panel panel-default">
+				<!--<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" href="#Monday">
@@ -137,9 +140,10 @@ function form($events){
 							<label><input type="checkbox" name="20" value="20">20:00-21:00</label>
 							<label><input type="checkbox" name="21" value="21">21:00-22:00</label>
 							<label><input type="checkbox" name="22" value="22">22:00-23:00</label>
+							<label><input type="checkbox" name="23" value="22">23:00-00:00</label>
 						</div>
 					</div>
-				</div>
+				</div>-->
 
 			</div><!--End sidebar-->
 			<form id="form" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" action="?action=formSubmit" method="POST">
