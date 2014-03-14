@@ -185,15 +185,19 @@ HEAD;
 }
 function footer(){
 	return <<<FOOT
-		<footer>
-			<p>Lovingly handcrafted by <a href="http://twitter.com/ifish12">Geoff Shapiro</a> &amp; <a href="https://github.com/Scuzzball">Mark Furland</a></p>
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 			<script src="js/bootstrap.js" type="text/javascript"></script>
 			<script src="js/filter.js" type="text/javascript"></script>
-		</footer>
 		</body>
-
 	</html>
+FOOT;
+}
+
+function footerText(){
+	return <<<FOOT
+		<footer>
+			<p>Lovingly handcrafted by <a href="http://twitter.com/ifish12">Geoff Shapiro</a> &amp; <a href="https://github.com/Scuzzball">Mark Furland</a></p>
+		</footer>
 FOOT;
 }
 
@@ -238,6 +242,7 @@ function landing(){
 
 EOF;
 
+	$out .= footerText();
 	$out .= footer();
 	return $out;
 }
