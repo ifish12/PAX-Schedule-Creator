@@ -95,7 +95,7 @@ class Event {
 		$this->startDateTime->setTimezone(timezone_open("UTC"));
 		$this->endDateTime->setTimezone(timezone_open("UTC"));
 		$out .= "BEGIN:VEVENT\r\n";
-		$out .= "UID:" . md5(uniqid(mt_rand(), true)) . "@yourhost.test\r\n";
+		$out .= "UID:" . gmdate("U") . $this->id ."@paxschedule.com\r\n";
 		$out .= "DTSTAMP:" . gmdate("Ymd").'T'. gmdate("His") . "Z\r\n";
 		$out .= "DTSTART:" . $this->startDateTime->format("Ymd") . "T" . $this->startDateTime->format("His") . "Z\r\n";
 		$out .= "DTEND:" . $this->endDateTime->format("Ymd") . "T" . $this->endDateTime->format("His") . "Z\r\n";
