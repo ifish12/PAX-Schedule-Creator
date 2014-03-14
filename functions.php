@@ -303,7 +303,7 @@ function about(){
 						<br>So, for a few months we just let it sit there. Around November we designed to rehaul the design using <a href="http://getbootstrap.com/">Bootstrap</a> because the way it was before was just disgusting. 
 						<br>So in December of 2013 we got in touch with <a href="https://twitter.com/coffmandave">David Coffman</a> to talk about the XML we got from them because he maintained it.
 						<br>David was actually a big influence and help with the entire project. Anyway, so after rehauling the entire design we were stumped for a few months. We kept thinking "What should we do now?"
-						<br>This was both of our first "real" products and we wanted to use this as a time to learn things. We worked on optimization, made it as efficient as we possibly could. It was a huge learning experinece.
+						<br>This was Geoff's first "real" products and we wanted to use this as a time to learn things. We worked on optimization, made it as efficient as we possibly could. It was a huge learning experinece.
 						<br>Then we implemented a caching mechanism. Mainly to help increase efficiency under high loads. After that, we did the hardest part which was arguably getting filtering to work.
 						<br>Filtering was implemented fully in around March of 2014 and it was a challenge for both Mark and Geoff. A series of small dumb mistakes but eventually leading to success.
 						<br>This entire project was a huge learning experience for both of us and we'd like to thank Khahil for giving us this idea and chance to do this.</p>
