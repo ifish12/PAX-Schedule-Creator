@@ -216,18 +216,21 @@ function landing(){
 
 	$out .= <<<EOF
 	<div class="jumbotron">
-	<div class="container">
-		<h1>PAX Schedule Creator</h1>
-		<p>This tool lets you create an <a href="http://en.wikipedia.org/wiki/ICalendar">iCalendar file</a>(The standard calendar file format) of the PAX schedule. This will be kept up to date with the most recent XML schedule we can get from Penny Arcade, usually about a month before the convention.
-		<br>This tool is not affilaited with Penny Arcade or PAX, it is merely a community tool to help people keep track of events at PAX.
-		<br>If you would like to know more about this project and the developers you can read about them <a href="http://paxschedule.com/?action=about">here</a>
-		<br>The source code can be found <a href="https://github.com/ifish12/PAX-Schedule-Creator">here</a></p>
-	</div>
+		<div class="container">
+			<h1>PAX Schedule Creator</h1>
+			<p>This tool lets you create an <a href="http://en.wikipedia.org/wiki/ICalendar">iCalendar file</a>(The standard calendar file format) of the PAX schedule. This will be kept up to date with the most recent XML schedule we can get from Penny Arcade, usually about a month before the convention.
+			<br>This tool is not affilaited with Penny Arcade or PAX, it is merely a community tool to help people keep track of events at PAX.
+			<br>If you would like to know more about this project and the developers you can read about them <a href="http://paxschedule.com/?action=about">here</a>
+			<br>The source code can be found <a href="https://github.com/ifish12/PAX-Schedule-Creator">here</a></p>
+		</div>
 	</div>
 
 	<div class="container">
 	
 		<div class="row">
+			<div class="col-md-12">
+				<div class="alert alert-info"><strong>Heads up!</strong> This tool currently uses the PAX East 2014 schedule.</div>
+			</div>
 			<div class="col-md-6">
 				<h2>All Events to iCalendar</h2>
 				<p>This takes all the events on the PAX schedule and puts them into a iCalendar file</p>
