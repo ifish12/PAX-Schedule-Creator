@@ -1,7 +1,7 @@
 <?PHP
 
-$START_DAY = "2014-04-11";
-$XML_LOCATION = "http://hw1.pa-cdn.com/pax/resources/GuidebookSchedule.xml";
+$TIMEZONE = "America/Los_Angeles";
+$XML_LOCATION = "http://hw1.pa-cdn.com/pax/resources/xml/GuidebookSchedule.xml";
 /**
  * makeICal creates the ical for the given events
  * @param events Events to turn into ical

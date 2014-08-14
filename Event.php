@@ -18,27 +18,11 @@ class Event {
 	function Event($data){
 		$this->title = $this->replaceAmpersand((string)$data->paneltitle);
 		$this->id = (int)$data->panelid;
-		//Do date stuff$subject = "abcdef";
-		preg_match('/(.+(?:am|pm)) - (.+(?:am|pm))/', $data->paneltime, $matches);
-		$startTime = $matches[1];
-		$endTime = $matches[2];
 
-		global $START_DAY;
 
-		$this->startDateTime = new DateTime($START_DAY . $startTime,timezone_open("EST"));
-		$this->endDateTime = new DateTime($START_DAY . $endTime,timezone_open("EST"));
+		$this->startDateTime = new DateTime('@' . $data->panelstarttime,new DateTimeZone('UTC'));
+		$this->endDateTime = new DateTime('@' . $data->panelendtime,new DateTimeZone('UTC'));
 		
-		
-		if($data->panelday == "Saturday"){//If it's on saturday
-			$this->startDateTime->modify("+1 days");
-			$this->endDateTime->modify("+1 days");
-		}elseif($data->panelday == "Sunday"){
-			$this->startDateTime->modify("+2 days");
-			$this->endDateTime->modify("+2 days");
-		}elseif($data->panelday == "Monday"){
-			$this->startDateTime->modify("+3 days");
-			$this->endDateTime->modify("+3 days");
-		}
 		$this->track = (string)$data->scheduletrack;
 		$this->location = (string)$data->paneltheatre;
 		$this->description = $this->replaceAmpersand((string)$data->paneldescription);
@@ -112,6 +96,9 @@ class Event {
 	 * returns part of a form for output
 	 **/
 	function formOut(){
+		global $TIMEZONE;
+		$this->startDateTime->setTimezone(new DateTimeZone($TIMEZONE));
+		$this->endDateTime->setTimezone(new DateTimeZone($TIMEZONE));
 		$out = "";
 	$out .= "\t<div class=\"panel panel-default eventContainer\">";
 		$out .= "\t<div class=\"hidden\">{\"day\":\"" . substr($this->startDateTime->format("l"),0,2) . "\",\"time\":\"" . $this->startDateTime->format("H") . "\",\"theatre\":\"" . htmlentities($this->location) . "\"}</div>";
