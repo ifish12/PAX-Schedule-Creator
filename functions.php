@@ -2,6 +2,7 @@
 
 $TIMEZONE = "America/Los_Angeles";
 $XML_LOCATION = "http://hw1.pa-cdn.com/pax/resources/xml/GuidebookSchedule.xml";
+$MONDAY = FALSE;
 /**
  * makeICal creates the ical for the given events
  * @param events Events to turn into ical
@@ -34,6 +35,13 @@ function outputICal($ical){
 
 
 function form($events){
+	global $MONDAY;
+	$mondayOpen = "<!--";
+	$mondayClose = "-->";
+	if($MONDAY){
+		$mondayOpen = "";
+		$mondayClose = "";
+	}
 	$out = headerHTML();
 	$out .= <<<STUFF
 	<div class="container-fluid">
@@ -120,7 +128,7 @@ function form($events){
 						</div>
 					</div>
 				</div>
-				<!--<div class="panel panel-default">
+				$mondayOpen<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" href="#Monday">
@@ -146,7 +154,7 @@ function form($events){
 							<label><input type="checkbox" name="23" value="22">23:00-00:00</label>
 						</div>
 					</div>
-				</div>-->
+				</div>$mondayClose
 
 			</div><!--End sidebar-->
 			<form id="form" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" action="?action=formSubmit" method="POST">

@@ -22,6 +22,10 @@ class Event {
 
 		$this->startDateTime = new DateTime('@' . $data->panelstarttime,new DateTimeZone('UTC'));
 		$this->endDateTime = new DateTime('@' . $data->panelendtime,new DateTimeZone('UTC'));
+		if($this->startDateTime->format("l") == "Monday"){
+			global $MONDAY;
+			$MONDAY = TRUE;
+		}
 		
 		$this->track = (string)$data->scheduletrack;
 		$this->location = (string)$data->paneltheatre;
