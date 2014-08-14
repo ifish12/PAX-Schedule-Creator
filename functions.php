@@ -237,7 +237,7 @@ function landing(){
 	
 		<div class="row">
 			<div class="col-md-12">
-				<div class="alert alert-info"><strong>Heads up!</strong> This tool currently uses the PAX East 2014 schedule.</div>
+				<div class="alert alert-info"><strong>Heads up!</strong> This tool currently uses the PAX Prime 2014 schedule.</div>
 			</div>
 			<div class="col-md-6">
 				<h2>All Events to iCalendar</h2>
