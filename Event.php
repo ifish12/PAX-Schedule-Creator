@@ -113,7 +113,7 @@ class Event {
 				$out .= "\t\t</label>\n";
 			$out .= "\t</div>\n";
 			$out .= "\t<div class=\"panel-body eventData\">\n";
-				$out .= "\t\t<span class=\"infoTitle\">Time:</span> " . $this->startDateTime->format("Y-m-d") . ": " . $this->startDateTime->format("H:i") . " - " . $this->endDateTime->format("H:i") . "<br>\n";
+				$out .= "\t\t<span class=\"infoTitle\">Time:</span> " . $this->startDateTime->format("Y-m-d: l H:i - ") . $this->endDateTime->format("H:i") . "<br>\n";
 				$out .= "\t\t<span class=\"infoTitle\">Theatre:</span> " . htmlentities($this->location) . "<br>\n";
 				$out .= "\t\t<span class=\"infoTitle\">Description:</span> " . htmlentities($this->description) . "\n";
 			$out .= "\t</div>";
