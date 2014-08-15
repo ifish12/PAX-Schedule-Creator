@@ -213,6 +213,10 @@ FOOT;
 }
 
 function formSubmit($AllEvents){
+	if(!isset($_POST["events"])){
+		echo "CHeck an event";
+		die;
+	}
 	$ids = $_POST["events"];
 	$events = array();
 	$events = array_intersect_key($AllEvents, array_flip($ids)); // This IS more efficient
