@@ -34,7 +34,7 @@ function outputICal($ical){
  **/
 
 
-function form($events){
+function form($events,$paxID){
 	global $MONDAY;
 	$mondayOpen = "<!--";
 	$mondayClose = "-->";
@@ -157,7 +157,7 @@ function form($events){
 				</div>$mondayClose
 
 			</div><!--End sidebar-->
-			<form id="form" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" action="?action=formSubmit" method="POST">
+			<form id="form" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" action="?action=formSubmit&amp;paxID=$paxID" method="POST">
 STUFF;
 			foreach($events as $event){
 				$out .= $event->formOut();
@@ -224,9 +224,10 @@ function formSubmit($AllEvents){
 }
 
 function landing(){
+	global $PAXES;
 	$out = headerHTML();
 
-	$out .= <<<EOF
+	$out .= <<<TEXT
 	<div class="jumbotron">
 		<div class="container">
 			<h1>PAX Schedule Creator</h1>
@@ -239,40 +240,52 @@ function landing(){
 
 	<div class="container">
 	
-		<div class="row">
+		<form class="row">
 			<div class="col-md-12">
-				<div class="alert alert-info"><strong>Heads up!</strong> This tool currently uses the PAX Prime 2014 schedule.</div>
+				<select name="paxID">
+TEXT;
+
+				foreach($PAXES as $key => $pax){
+					$out .= "<option value=\"$key\">{$pax["name"]}</option>\n";
+				}
+
+	$out .= <<<TEXT
+				</select>
 			</div>
 			<div class="col-md-6">
 				<h2>All Events to iCalendar</h2>
 				<p>This takes all the events on the PAX schedule and puts them into a iCalendar file</p>
-				<p><a class="btn btn-primary" href="?action=allEvents">All events to iCalendar</a></p>
+				<p><button type="submit" class="btn btn-primary" name="action" value="allEvents">All events to iCalendar</button></p>
 			</div>
 			<div class="col-md-6">
 				<h2>Choose what events go to iCalendar</h2>
 				<p>This throws you to a list of check boxes which you can then pick and choose what events go into the iCalendar file if you don't want to import every single event into the iCalendar file</p>
-				<p><a class="btn btn-success" href="?action=form">Choose what events go to iCalendar</a></p>
+				<p><button type="submit" class="btn btn-success" name="action" value="form">Choose what events go to iCalendar</button></p>
 			</div>
-		</div>
+		</form>
 
 		<hr>
 
 		
 
-EOF;
+TEXT;
 
 	$out .= footerText();
 	$out .= footer();
 	return $out;
 }
 
-function parseEvents(){ // This function is our temporary fix for a bigger issue.
-	global $XML_LOCATION;
-	$scheduleData = new SimpleXMLElement($XML_LOCATION, NULL, TRUE);
+/**
+ * parseEvents parses the reuired xml, and returns the array
+ * $index is the index of the desired pax in the $PAXES array
+ **/
+function parseEvents($paxID){
+	global $PAXES;
+	$scheduleData = new SimpleXMLElement($PAXES[$paxID]['xml'], NULL, TRUE);
 
 	$events = array();
 	foreach($scheduleData->panel as $event){
-		$events[(int)$event->panelid] = new Event($event);
+		$events[(int)$event->panelid] = new Event($event,$paxID);
 	}
 	return $events;
 }

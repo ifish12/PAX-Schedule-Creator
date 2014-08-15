@@ -10,12 +10,13 @@ class Event {
 	var $description;
 	var $panelistHeader;
 	var $panelists;
+	var $paxID;
 
 	/**
 	 * Event constructor
 	 * data is an XML object containing data for the event
 	 **/
-	function Event($data){
+	function Event($data,$paxID){
 		$this->title = $this->replaceAmpersand((string)$data->paneltitle);
 		$this->id = (int)$data->panelid;
 
@@ -43,6 +44,7 @@ class Event {
 		}else{//No pannelists
 			$this->panelists = null;
 		}
+		$this->paxID = $paxID;
 	}//End constructor
 	
 	/**
@@ -100,9 +102,10 @@ class Event {
 	 * returns part of a form for output
 	 **/
 	function formOut(){
-		global $TIMEZONE;
-		$this->startDateTime->setTimezone(new DateTimeZone($TIMEZONE));
-		$this->endDateTime->setTimezone(new DateTimeZone($TIMEZONE));
+		global $PAXES;
+		$this->startDateTime->setTimezone(new DateTimeZone($PAXES[$this->paxID]['timezone']));
+		$this->endDateTime->setTimezone(new DateTimeZone($PAXES[$this->paxID]['timezone']));
+
 		$out = "";
 	$out .= "\t<div class=\"panel panel-default eventContainer\">";
 		$out .= "\t<div class=\"hidden\">{\"day\":\"" . substr($this->startDateTime->format("l"),0,2) . "\",\"time\":\"" . $this->startDateTime->format("H") . "\",\"theatre\":\"" . htmlentities($this->location) . "\"}</div>";
