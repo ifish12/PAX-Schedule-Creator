@@ -11,7 +11,6 @@ class Event {
 	var $panelistHeader;
 	var $panelists;
 	var $paxID;
-
 	/**
 	 * Event constructor
 	 * data is an XML object containing data for the event
@@ -19,20 +18,17 @@ class Event {
 	function Event($data,$paxID){
 		$this->title = $this->replaceAmpersand((string)$data->paneltitle);
 		$this->id = (int)$data->panelid;
-
-
 		$this->startDateTime = new DateTime('@' . $data->panelstarttime,new DateTimeZone('UTC'));
 		$this->endDateTime = new DateTime('@' . $data->panelendtime,new DateTimeZone('UTC'));
 		if($this->startDateTime->format("l") == "Monday"){
 			global $MONDAY;
 			$MONDAY = TRUE;
 		}
-		
 		$this->track = (string)$data->scheduletrack;
 		$this->location = (string)$data->paneltheatre;
 		$this->description = $this->replaceAmpersand((string)$data->paneldescription);
 		$this->panelistHeader = (string)$data->panelistheader;
-		
+
 		if(isset($data->panelpanelists)){//If there are panelists
 			if(isset($data->panelpanelists[0])){//pannelists is an array
 				foreach($data->panelpanelists as $panelist){
@@ -46,7 +42,7 @@ class Event {
 		}
 		$this->paxID = $paxID;
 	}//End constructor
-	
+
 	/**
 	 * checkID is for checking if an ID is the ID of this event
 	 * @param id
@@ -64,7 +60,7 @@ class Event {
 		$string = str_replace('~ampersand~', '&', $string);
 		return $string;
 	}
-	
+
 	/**
 	 * escapeForICal
 	 * Escapes characters for iCal
@@ -75,7 +71,7 @@ class Event {
 		$string = str_replace(',', '\\,', $string);
 		return $string;
 	}
-	
+
 	/**
 	 * vEvent
 	 * returns the VEVENT part of an ical file.
@@ -96,7 +92,6 @@ class Event {
 		$out .= "END:VEVENT\r\n";
 		return $out;
 	}
-	
 	/**
 	 * formOut
 	 * returns part of a form for output

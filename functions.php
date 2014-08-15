@@ -239,10 +239,10 @@ function landing(){
 	</div>
 
 	<div class="container">
-	
+
 		<form class="row">
 			<div class="col-md-12">
-				<select name="paxID">
+				<select name="paxID" class="form-control">
 TEXT;
 
 				foreach($PAXES as $key => $pax){
@@ -266,7 +266,7 @@ TEXT;
 
 		<hr>
 
-		
+
 
 TEXT;
 
@@ -297,13 +297,13 @@ function about(){
 		<div class="jumbotron">
 			<div class="container">
 				<h1>Want to know more about this project?</h1>
-				<p>On this page you will read about the developement of this project, how this project all started, and even how Mark met Geoff. 
+				<p>On this page you will read about the developement of this project, how this project all started, and even how Mark met Geoff.
 				<br>It's a pretty interesting story so read on if you're interested</p>
 			</div>
 			</div>
 
 			<div class="container">
-			
+
 				<div class="row">
 					<div class="col-md-12">
 						<h2>How Mark and Geoff met</h2>
@@ -318,7 +318,7 @@ function about(){
 					<div class="col-md-12">
 						<h2>How we got the idea to make this version.</h2>
 						<p>You might be thinking something along the lines of "Wait, if you both already made your own versions of the same thing, why did you want to make this?" and that's a very good question!
-						<br>Well, Geoff often hangs out in the #PAX IRC on the Slashnet network and <a href="https://twitter.com/h_e_e_l_s">Khahil White</a> approached Geoff saying he heard about the previous version he made and he was interested in Geoff making a faux-official one. Geoff doesn't really like working alone on projects, 
+						<br>Well, Geoff often hangs out in the #PAX IRC on the Slashnet network and <a href="https://twitter.com/h_e_e_l_s">Khahil White</a> approached Geoff saying he heard about the previous version he made and he was interested in Geoff making a faux-official one. Geoff doesn't really like working alone on projects,
 						specailly not somewhat big ones, so he reached out to Mark to see if he'd want to help out. Geoff figured Mark would be great because he already knows how the iCalendar format works.
 						<br>So that's how we got this idea for this project.
 						<br>Also both versions Mark and Geoff both made kind of SUCKED in comparison to this anyway.
@@ -326,10 +326,10 @@ function about(){
 					</div>
 					<div class="col-md-12">
 						<h2>How the actual developement went down and what we experienced</h2>
-						<p>Anyway, in September of 2013 Khahil sent Mark and Geoff the XML file of the PAX schedule. So we started working on an actual prototype. 
+						<p>Anyway, in September of 2013 Khahil sent Mark and Geoff the XML file of the PAX schedule. So we started working on an actual prototype.
 						<br>We actually finished the prototype in a span of two days. It didn't take very long at all. Though our design was awful and the functionality was pretty barebones.
 						<br>We had the functions to export everything into an iCalendar file, or a big list like we do now, but instead of having filtering, it was just a big list. Nobody has time to scroll through all of that data.
-						<br>So, for a few months we just let it sit there. Around November we decided to rehaul the design using <a href="http://getbootstrap.com/">Bootstrap</a> because the way it was before was just disgusting. 
+						<br>So, for a few months we just let it sit there. Around November we decided to rehaul the design using <a href="http://getbootstrap.com/">Bootstrap</a> because the way it was before was just disgusting.
 						<br>So in December of 2013 we got in touch with <a href="https://twitter.com/coffmandave">David Coffman</a> to talk about the XML we got from them because he maintained it.
 						<br>David was actually a big influence and help with the entire project. Anyway, so after rehauling the entire design we were stumped for a few months. We kept thinking "What should we do now?"
 						<br>This was Geoff's first "real" products and we wanted to use this as a time to learn things. We worked on optimization, made it as efficient as we possibly could. It was a huge learning experinece.
