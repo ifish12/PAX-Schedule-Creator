@@ -16,14 +16,20 @@ class Event {
 	 * data is an XML object containing data for the event
 	 **/
 	function Event($data,$paxID){
+		global $DAYS;
+		global $PAXES;
+
+		$this->paxID = $paxID;
+
 		$this->title = $this->replaceAmpersand((string)$data->paneltitle);
 		$this->id = (int)$data->panelid;
 		$this->startDateTime = new DateTime('@' . $data->panelstarttime,new DateTimeZone('UTC'));
 		$this->endDateTime = new DateTime('@' . $data->panelendtime,new DateTimeZone('UTC'));
-		if($this->startDateTime->format("l") == "Monday"){
-			global $MONDAY;
-			$MONDAY = TRUE;
-		}
+
+		//Seup DAYS
+		//Take start time, modify timezone to the event timezone, and then format it all in one line. This has the effect of leaving it in a weird timezone, but all print statements are preceeded by a settimezone statement, so it's all good.
+		$DAYS[$this->startDateTime->setTimezone(new DateTimeZone($PAXES[$this->paxID]['timezone']))->format("l")] = TRUE;
+
 		$this->track = (string)$data->scheduletrack;
 		$this->location = (string)$data->paneltheatre;
 		$this->description = $this->replaceAmpersand((string)$data->paneldescription);
@@ -40,7 +46,6 @@ class Event {
 		}else{//No pannelists
 			$this->panelists = null;
 		}
-		$this->paxID = $paxID;
 	}//End constructor
 
 	/**

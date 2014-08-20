@@ -2,8 +2,15 @@
 ini_set('display_errors',1);
 error_reporting(E_ALL);
 
-
-$MONDAY = FALSE;
+$DAYS = array(
+	'Monday' => FALSE,
+	'Tuesday' => FALSE,
+	'Wednesday' => FALSE,
+	'Thursday' => FALSE,
+	'Friday' => FALSE,
+	'Saturday' => FALSE,
+	'Sunday' => FALSE,
+);
 $PAXES = array(
 	array("name" => "PAX Prime 2014","timezone" => "America/Los_Angeles","xml" => "http://hw1.pa-cdn.com/pax/resources/xml/GuidebookSchedule.xml"),
 	array("name" => "PAX Dev 2014","timezone" => "America/Los_Angeles","xml" => "http://hw1.pa-cdn.com/pax/resources/xml/DevGuidebookSchedule.xml"),

@@ -1,5 +1,4 @@
 <?PHP
-$MONDAY = FALSE;
 /**
  * makeICal creates the ical for the given events
  * @param events Events to turn into ical
@@ -32,27 +31,26 @@ function outputICal($ical){
 
 
 function form($events,$paxID){
-	global $MONDAY;
-	$mondayOpen = "<!--";
-	$mondayClose = "-->";
-	if($MONDAY){
-		$mondayOpen = "";
-		$mondayClose = "";
-	}
+	global $DAYS;
+
 	$out = headerHTML();
-	$out .= <<<STUFF
+	$out .= <<<SIDEBAR
 	<div class="container-fluid">
 		<div class="row">
 			<div id="sidebar" class="col-sm-3 col-md-2 sidebar">
+SIDEBAR;
+	foreach($DAYS as $day => $useDay){
+		if($useDay){
+			$out .= <<<DAY
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a data-toggle="collapse" href="#Friday">
-								Friday
+							<a data-toggle="collapse" href="#$day">
+								$day
 							</a>
 						</h4>
 					</div>
-					<div id="Friday" class="panel-collapse collapse">
+					<div id="$day" class="panel-collapse collapse">
 						<div class="panel-body">
 							<label><input type="checkbox" name="10" value="10">10:00-11:00</label>
 							<label><input type="checkbox" name="11" value="11">11:00-12:00</label>
@@ -71,91 +69,13 @@ function form($events,$paxID){
 						</div>
 					</div>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title">
-							<a data-toggle="collapse" href="#Saturday">
-								Saturday
-							</a>
-						</h4>
-					</div>
-					<div id="Saturday" class="panel-collapse collapse">
-						<div class="panel-body">
-							<label><input type="checkbox" name="10" value="10">10:00-11:00</label>
-							<label><input type="checkbox" name="11" value="11">11:00-12:00</label>
-							<label><input type="checkbox" name="12" value="12">12:00-13:00</label>
-							<label><input type="checkbox" name="13" value="13">13:00-14:00</label>
-							<label><input type="checkbox" name="14" value="14">14:00-15:00</label>
-							<label><input type="checkbox" name="15" value="15">15:00-16:00</label>
-							<label><input type="checkbox" name="16" value="16">16:00-17:00</label>
-							<label><input type="checkbox" name="17" value="17">17:00-18:00</label>
-							<label><input type="checkbox" name="18" value="18">18:00-19:00</label>
-							<label><input type="checkbox" name="19" value="19">19:00-20:00</label>
-							<label><input type="checkbox" name="20" value="20">20:00-21:00</label>
-							<label><input type="checkbox" name="21" value="21">21:00-22:00</label>
-							<label><input type="checkbox" name="22" value="22">22:00-23:00</label>
-							<label><input type="checkbox" name="23" value="22">23:00-00:00</label>
-						</div>
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title">
-							<a data-toggle="collapse" href="#Sunday">
-								Sunday
-							</a>
-						</h4>
-					</div>
-					<div id="Sunday" class="panel-collapse collapse">
-						<div class="panel-body">
-							<label><input type="checkbox" name="10" value="10">10:00-11:00</label>
-							<label><input type="checkbox" name="11" value="11">11:00-12:00</label>
-							<label><input type="checkbox" name="12" value="12">12:00-13:00</label>
-							<label><input type="checkbox" name="13" value="13">13:00-14:00</label>
-							<label><input type="checkbox" name="14" value="14">14:00-15:00</label>
-							<label><input type="checkbox" name="15" value="15">15:00-16:00</label>
-							<label><input type="checkbox" name="16" value="16">16:00-17:00</label>
-							<label><input type="checkbox" name="17" value="17">17:00-18:00</label>
-							<label><input type="checkbox" name="18" value="18">18:00-19:00</label>
-							<label><input type="checkbox" name="19" value="19">19:00-20:00</label>
-							<label><input type="checkbox" name="20" value="20">20:00-21:00</label>
-							<label><input type="checkbox" name="21" value="21">21:00-22:00</label>
-							<label><input type="checkbox" name="22" value="22">22:00-23:00</label>
-							<label><input type="checkbox" name="23" value="22">23:00-00:00</label>
-						</div>
-					</div>
-				</div>
-				$mondayOpen<div class="panel panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title">
-							<a data-toggle="collapse" href="#Monday">
-								Monday
-							</a>
-						</h4>
-					</div>
-					<div id="Monday" class="panel-collapse collapse">
-						<div class="panel-body">
-							<label><input type="checkbox" name="10" value="10">10:00-11:00</label>
-							<label><input type="checkbox" name="11" value="11">11:00-12:00</label>
-							<label><input type="checkbox" name="12" value="12">12:00-13:00</label>
-							<label><input type="checkbox" name="13" value="13">13:00-14:00</label>
-							<label><input type="checkbox" name="14" value="14">14:00-15:00</label>
-							<label><input type="checkbox" name="15" value="15">15:00-16:00</label>
-							<label><input type="checkbox" name="16" value="16">16:00-17:00</label>
-							<label><input type="checkbox" name="17" value="17">17:00-18:00</label>
-							<label><input type="checkbox" name="18" value="18">18:00-19:00</label>
-							<label><input type="checkbox" name="19" value="19">19:00-20:00</label>
-							<label><input type="checkbox" name="20" value="20">20:00-21:00</label>
-							<label><input type="checkbox" name="21" value="21">21:00-22:00</label>
-							<label><input type="checkbox" name="22" value="22">22:00-23:00</label>
-							<label><input type="checkbox" name="23" value="22">23:00-00:00</label>
-						</div>
-					</div>
-				</div>$mondayClose
-
+DAY;
+		}
+	}
+	$out .= <<<SIDEBAR
 			</div><!--End sidebar-->
 			<form id="form" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" action="?action=formSubmit&amp;paxID=$paxID" method="POST">
-STUFF;
+SIDEBAR;
 			foreach($events as $event){
 				$out .= $event->formOut();
 			}
