@@ -79,7 +79,7 @@ SIDEBAR;
 			foreach($events as $event){
 				$out .= $event->formOut();
 			}
-			$out .= "\t<input onClick=\"_gaq.push(['_trackEvent', 'DownloadIcal', 'All']);\" type=\"submit\" class=\"btn btn-danger\" value=\"Submit\">";
+			$out .= "\t<input onClick=\"_gaq.push(['_trackEvent', 'DownloadIcal', 'Select']);\" type=\"submit\" class=\"btn btn-danger\" value=\"Submit\">";
 			$out .= "\t</form>";
 		$out .= "\t</div>";
 	$out .= "\t</div>";
