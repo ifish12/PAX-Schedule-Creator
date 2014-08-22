@@ -13,7 +13,8 @@ class Cache{
 
 	//ACTUALLY CHECK IF FILE EXISTS
 	function exists($fileName){
-		return file_exists($this->CACHE_DIR . $fileName) && ($this->currentTime - $this->EXPIRE_TIME < filemtime($this->CACHE_DIR . $fileName));
+		echo $fileName;
+		return file_exists($this->CACHE_DIR . $fileName) ? ($this->currentTime - $this->EXPIRE_TIME < filemtime($this->CACHE_DIR . $fileName)) : FALSE;
 	}
 
 
