@@ -79,7 +79,7 @@ SIDEBAR;
 			foreach($events as $event){
 				$out .= $event->formOut();
 			}
-			$out .= "\t<input type=\"submit\" class=\"btn btn-danger\" value=\"Submit\">";
+			$out .= "\t<input onClick=\"_gaq.push(['_trackEvent', 'DownloadIcal', 'All']);\" type=\"submit\" class=\"btn btn-danger\" value=\"Submit\">";
 			$out .= "\t</form>";
 		$out .= "\t</div>";
 	$out .= "\t</div>";
@@ -97,14 +97,17 @@ function headerHTML(){
 			<link href="css/bootstrap.css" rel="stylesheet">
 			<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 			<link href="css/css.css" rel="stylesheet">
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<script type="text/javascript">
 
-  ga('create', 'UA-48072408-1', 'paxschedule.com');
-  ga('send', 'pageview');
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-48072408-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
 </script>
 		</head>
@@ -172,7 +175,7 @@ TEXT;
 			<div class="col-md-6">
 				<h2>All Events to iCalendar</h2>
 				<p>This takes all the events on the PAX schedule and puts them into a iCalendar file</p>
-				<p><button type="submit" class="btn btn-primary" name="action" value="allEvents">All events to iCalendar</button></p>
+				<p><button onClick="_gaq.push(['_trackEvent', 'DownloadIcal', 'All']);" type="submit" class="btn btn-primary" name="action" value="allEvents">All events to iCalendar</button></p>
 			</div>
 			<div class="col-md-6">
 				<h2>Choose what events go to iCalendar</h2>
