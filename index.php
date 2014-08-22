@@ -31,13 +31,13 @@ $cache = new Cache();
 
 switch($action){
 	case "allEvents":
-		//if($cache->exists("ical")){
-		//	echo outputICal($cache->get("ical"));
-		//}else{
+		if($cache->exists("ical" . $_GET['paxID'])){
+			echo outputICal($cache->get("ical") . $paxes[$_get['paxid']]['name']);
+		}else{
 			$ical = makeICal(parseEvents($_GET['paxID']));
-		//	$cache->setCache("ical",$ical);
+			$cache->setCache("ical" . $_GET['paxID'],$ical);
 			echo outputICal($ical);
-		//}
+		}
 		break;
 	case "form":
 		echo form(parseEvents($_GET['paxID']),$_GET['paxID']);
