@@ -1,6 +1,6 @@
 <?PHP
 /*
-Taken from http://davidwalsh.fileName/php-cache-function
+Taken from http://davidwalsh.name/php-cache-function
 */
 class Cache{
 	var $CACHE_DIR = "cache/";
