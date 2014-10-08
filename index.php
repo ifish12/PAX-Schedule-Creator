@@ -14,9 +14,9 @@ $DAYS = array(
 $PAXES = array(
 	array("name" => "PAX Prime 2014","timezone" => "America/Los_Angeles","xml" => "http://hw1.pa-cdn.com/pax/resources/xml/GuidebookSchedule.xml"),
 	array("name" => "PAX Dev 2014","timezone" => "America/Los_Angeles","xml" => "http://hw1.pa-cdn.com/pax/resources/xml/DevGuidebookSchedule.xml"),
+	array("name" => "PAX Australia 2014","timezone" => "Australia/Melbourne","xml" => "http://hw1.pa-cdn.com/pax/resources/xml/AusGuidebookSchedule.xml"),
 	//array("name" => "PAX South 2015","timezone" => "America/Chicago","xml" => "http://hw1.pa-cdn.com/pax/resources/xml/SouthGuidebookSchedule.xml"),
-  //array("name" => "PAX Australia 2014","timezone" => "Australia/Melbourne","xml" => "http://hw1.pa-cdn.com/pax/resources/xml/AusGuidebookSchedule.xml"),
-  //array("name" => "PAX East 2015","timezone" => "America/Montreal","xml" => "http://hw1.pa-cdn.com/pax/resources/xml/EastGuidebookSchedule.xml"),
+    //array("name" => "PAX East 2015","timezone" => "America/Montreal","xml" => "http://hw1.pa-cdn.com/pax/resources/xml/EastGuidebookSchedule.xml"),
 );
 
 
