@@ -12,7 +12,7 @@ $DAYS = array(
 	'Sunday' => FALSE,
 );
 $PAXES = array(
-	array("name" => "PAX South 2015 January 23rd - 25th","timezone" => "America/Chicago","xml" => "http://hw1.pa-cdn.com/pax/resources/xml/SouthGuidebookSchedule.xml"),
+	array("name" => "PAX South 2015 January 23rd - 25th","timezone" => "America/Los_Angeles","xml" => "http://hw1.pa-cdn.com/pax/resources/xml/SouthGuidebookSchedule.xml"),
 	array("name" => "PAX Prime 2014 August 29th - September 1st","timezone" => "America/Los_Angeles","xml" => "http://hw1.pa-cdn.com/pax/resources/xml/GuidebookSchedule.xml"),
 	array("name" => "PAX Dev 2014 August 27th - 28th","timezone" => "America/Los_Angeles","xml" => "http://hw1.pa-cdn.com/pax/resources/xml/DevGuidebookSchedule.xml"),
 	array("name" => "PAX Australia 2014 October 31st - November 2nd","timezone" => "Australia/Melbourne","xml" => "http://hw1.pa-cdn.com/pax/resources/xml/AusGuidebookSchedule.xml"),
