@@ -23,8 +23,19 @@ class Event {
 
 		$this->title = $this->replaceAmpersand((string)$data->paneltitle);
 		$this->id = (int)$data->panelid;
-		$this->startDateTime = new DateTime('@' . $data->panelstarttime,new DateTimeZone('UTC'));
-		$this->endDateTime = new DateTime('@' . $data->panelendtime,new DateTimeZone('UTC'));
+
+
+		/*
+		 * OKAY HORRIFYING THINGS:
+		 * So the unix timestamps we get from the xml pretend all events are local to PST.
+		 * Turns out, they aren't. Australia is not in fact in PST. So we put the offset in the event array. And then subtract it.
+		 * Isn't that fun?!
+		 * Just be happy I left comments.
+		**/
+		$this->startDateTime = new DateTime('@' . ($data->panelstarttime - 60*60*$PAXES[$this->paxID]['offset']) ,new DateTimeZone('UTC'));
+		$this->endDateTime = new DateTime('@' . ($data->panelendtime - 60*60*$PAXES[$this->paxID]['offset']) ,new DateTimeZone('UTC'));
+
+
 
 		//Seup DAYS
 		//Take start time, modify timezone to the event timezone, and then format it all in one line. This has the effect of leaving it in a weird timezone, but all print statements are preceeded by a settimezone statement, so it's all good.
