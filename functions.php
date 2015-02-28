@@ -127,7 +127,7 @@ FOOT;
 function footerText(){
 	return <<<FOOT
 		<footer>
-			<p>Lovingly handcrafted by <a href="http://twitter.com/ifish12">Geoff Shapiro</a> &amp; <a href="https://github.com/Scuzzball">Mark Furland</a></p>
+			<p>Lovingly handcrafted by <a href="https://github.com/ifish12">Geoff Shapiro</a> &amp; <a href="https://github.com/Scuzzball">Mark Furland</a></p>
 		</footer>
 FOOT;
 }
